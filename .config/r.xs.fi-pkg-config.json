@@ -1,0 +1,21 @@
+{
+	"supply_chain_descriptor": "python-pip-package:wa-crypt-tools",
+	"usage_examples": [
+		{
+			"title": "Decrypt WhatsApp database",
+			"before_docker_run": "read -s backup_encryption_key",
+			"cmd": "\"$backup_encryption_key\" msgstore.db.crypt15",
+			"example_output": "keyfactory.py:46        : [I] The keyfile could not be opened.\nkey15.py:54     : [I] Crypt15 / Raw key loaded\nwadecrypt.py:271        : [I] Done",
+			"tips": [
+				"Decrypted database will be written to `msgstore.db` (the `.crypt15` from your input argument stripped out)",
+				"You can then open the database with `$ sqlite3 msgstore.db` for example",
+				"Entire process: https://bsky.app/profile/joonas.fi/post/3mtg4svza422o"
+			],
+			"mount_workdir": true
+		}
+	],
+	"not_building_for_platforms_because": {
+		"linux/arm/v7": "Failed to build pycryptodomex (No such file or directory: 'cc')",
+		"linux/riscv64": "Failed to build pycryptodomex (No such file or directory: 'cc')"
+	}
+}

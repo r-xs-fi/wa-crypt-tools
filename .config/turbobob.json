@@ -1,0 +1,12 @@
+{
+	"for_description_of_this_file_see": "https://github.com/function61/turbobob",
+	"version_major": 1,
+	"project_name": "wa-crypt-tools",
+	"meta": {
+		"description": "Container image for wa-crypt-tools - decrypt WhatsApp database.",
+		"website": "https://github.com/ElDavoo/wa-crypt-tools"
+	},
+	"docker_images": [
+		{ "tag_latest": true, "image": "ghcr.io/r-xs-fi/wa-crypt-tools", "platforms": ["linux/amd64", "linux/arm64"] }
+	]
+}
